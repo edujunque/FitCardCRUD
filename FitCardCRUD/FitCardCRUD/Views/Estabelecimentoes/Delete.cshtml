@@ -1,4 +1,4 @@
-﻿@model FitCardCRUD.Models.Estabelecimento
+﻿@model FitCardCRUD.ViewModel.EstabecimentoViewModel
 
 @{
     ViewBag.Title = "Delete";
@@ -12,51 +12,59 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.estabNome)
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabNome)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.estabNome)
+            @Html.DisplayFor(model => model.Estabelecimento.estabNome)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.estabNomeFantasia)
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabNomeFantasia)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.estabNomeFantasia)
+            @Html.DisplayFor(model => model.Estabelecimento.estabNomeFantasia)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.estabCNPJ)
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabCNPJ)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.estabCNPJ)
+            @Html.DisplayFor(model => model.Estabelecimento.estabCNPJ)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.estabEmail)
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabEmail)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.estabEmail)
+            @Html.DisplayFor(model => model.Estabelecimento.estabEmail)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.estabTelefone)
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabTelefone)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.estabTelefone)
+            @Html.DisplayFor(model => model.Estabelecimento.estabTelefone)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.estabStatus)
+            @Html.DisplayNameFor(model => model.Estabelecimento.CategoriaId)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.estabStatus)
+            @Html.DisplayFor(model => model.Estabelecimento.categoria.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabStatus)
         </dd>
 
     </dl>

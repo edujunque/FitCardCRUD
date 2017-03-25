@@ -38,7 +38,7 @@ namespace FitCardCRUD.Controllers
         // GET: Categorias/Create
         public ActionResult Create()
         {
-            return View();
+          return View();
         }
 
         // POST: Categorias/Create

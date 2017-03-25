@@ -208,6 +208,7 @@
     <Compile Include="Models\Estabelecimento.cs" />
     <Compile Include="Models\FitCardCRUDContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\EstabecimentoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

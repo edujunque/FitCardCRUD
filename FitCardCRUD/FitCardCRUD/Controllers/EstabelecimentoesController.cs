@@ -32,13 +32,24 @@ namespace FitCardCRUD.Controllers
             {
                 return HttpNotFound();
             }
-            return View(estabelecimento);
+            var categorias = db.Categorias.ToList();
+            var viewModel = new ViewModel.EstabecimentoViewModel
+            {
+                Categorias = categorias,
+                Estabelecimento = estabelecimento
+            };
+            return View(viewModel);
         }
 
         // GET: Estabelecimentoes/Create
         public ActionResult Create()
         {
-            return View();
+            var categorias = db.Categorias.ToList();
+            var viewModel = new ViewModel.EstabecimentoViewModel
+            {
+                Categorias = categorias
+            };
+            return View("Create", viewModel);
         }
 
         // POST: Estabelecimentoes/Create
@@ -46,7 +57,7 @@ namespace FitCardCRUD.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,estabNome,estabNomeFantasia,estabCNPJ,estabEmail,estabTelefone,estabStatus")] Estabelecimento estabelecimento)
+        public ActionResult Create([Bind(Include = "Id,estabNome,estabNomeFantasia,estabCNPJ,estabEmail,estabTelefone,estabStatus,CategoriaId")] Estabelecimento estabelecimento)
         {
             if (ModelState.IsValid)
             {
@@ -70,7 +81,13 @@ namespace FitCardCRUD.Controllers
             {
                 return HttpNotFound();
             }
-            return View(estabelecimento);
+            var categorias = db.Categorias.ToList();
+            var viewModel = new ViewModel.EstabecimentoViewModel
+            {
+                Categorias = categorias,
+                Estabelecimento = estabelecimento
+            };
+            return View(viewModel);
         }
 
         // POST: Estabelecimentoes/Edit/5
@@ -78,7 +95,7 @@ namespace FitCardCRUD.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,estabNome,estabNomeFantasia,estabCNPJ,estabEmail,estabTelefone,estabStatus")] Estabelecimento estabelecimento)
+        public ActionResult Edit([Bind(Include = "Id,estabNome,estabNomeFantasia,estabCNPJ,estabEmail,estabTelefone,estabStatus,CategoriaId")] Estabelecimento estabelecimento)
         {
             if (ModelState.IsValid)
             {
@@ -101,7 +118,13 @@ namespace FitCardCRUD.Controllers
             {
                 return HttpNotFound();
             }
-            return View(estabelecimento);
+            var categorias = db.Categorias.ToList();
+            var viewModel = new ViewModel.EstabecimentoViewModel
+            {
+                Categorias = categorias,
+                Estabelecimento = estabelecimento
+            };
+            return View(viewModel);
         }
 
         // POST: Estabelecimentoes/Delete/5
