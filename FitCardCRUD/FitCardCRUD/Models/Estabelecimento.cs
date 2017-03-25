@@ -8,7 +8,7 @@ namespace FitCardCRUD.Models
 {
     public class Estabelecimento
     {
-        public Guid idEstabelecimento { get; set; }
+        public int Id { get; set; }
         public string estabNome { get; set; }
         [Required]
         public string estabNomeFantasia { get; set; }
@@ -18,7 +18,7 @@ namespace FitCardCRUD.Models
         public string estabTelefone { get; set; }
         public bool estabStatus { get; set; }
         public Categoria categoria { get; set; }
-
+        public int CategoriaId { get; set; }
         //Categoria[Supermercado, Restaurante, Borracharia, Posto, Oficina];
     }
 }

@@ -1,0 +1,66 @@
+﻿@model FitCardCRUD.Models.Estabelecimento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Estabelecimento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.estabNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estabNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estabNomeFantasia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estabNomeFantasia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estabCNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estabCNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estabEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estabEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estabTelefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estabTelefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estabStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estabStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
