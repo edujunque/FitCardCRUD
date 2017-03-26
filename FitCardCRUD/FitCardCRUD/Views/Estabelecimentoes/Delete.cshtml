@@ -1,0 +1,80 @@
+﻿@model FitCardCRUD.ViewModel.EstabecimentoViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Você tem certeza que quer deletar esse estabelecimento?</h3>
+<div>
+    <h4>Estabelecimento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabNomeFantasia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabNomeFantasia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabCNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabCNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabTelefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabTelefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.CategoriaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.categoria.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabStatus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para listagem", "Index")
+        </div>
+    }
+</div>
