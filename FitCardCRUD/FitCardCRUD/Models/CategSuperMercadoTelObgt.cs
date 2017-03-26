@@ -16,7 +16,7 @@ namespace FitCardCRUD.Models
             {
                 return ValidationResult.Success;
             }
-            else if(estabelecimento.estabTelefone == "") { 
+            else if(estabelecimento.estabTelefone == null) { 
                 return new ValidationResult("Telefone é obrigatório.");
             }
             else
