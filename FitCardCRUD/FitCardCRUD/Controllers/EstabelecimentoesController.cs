@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FitCardCRUD.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace FitCardCRUD.Controllers
 {
@@ -59,6 +60,19 @@ namespace FitCardCRUD.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,estabNome,estabNomeFantasia,estabCNPJ,estabEmail,estabTelefone,estabStatus,CategoriaId")] Estabelecimento estabelecimento)
         {
+
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new ViewModel.EstabecimentoViewModel
+                {
+                    Estabelecimento = estabelecimento,
+                    Categorias = db.Categorias.ToList()
+                };
+
+                return View("Create", viewModel);
+
+            }
+
             if (ModelState.IsValid)
             {
                 db.Estabelecimentoes.Add(estabelecimento);

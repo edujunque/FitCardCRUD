@@ -9,9 +9,9 @@ namespace FitCardCRUD.Models
     public class Estabelecimento
     {
         public int Id { get; set; }
-        [Display(Name = "Nome")]
-        public string estabNome { get; set; }
         [Required]
+        [Display(Name = "Razão social")]
+        public string estabNome { get; set; }
         [Display(Name = "Nome Fantasia")]
         public string estabNomeFantasia { get; set; }
         [Required]
@@ -20,8 +20,11 @@ namespace FitCardCRUD.Models
         [Display(Name = "E-mail")]
         [EmailAddress(ErrorMessage = "E-mail em formato inválido.")]
         public string estabEmail { get; set; }
+
         [Display(Name = "Telefone")]
+        [CategSuperMercadoTelObgt]
         public string estabTelefone { get; set; }
+
         [Display(Name = "Status")]
         public bool estabStatus { get; set; }
         public Categoria categoria { get; set; }

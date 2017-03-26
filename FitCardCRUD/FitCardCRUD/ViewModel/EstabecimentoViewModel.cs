@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using FitCardCRUD.Models;
 
 namespace FitCardCRUD.ViewModel
 {
     public class EstabecimentoViewModel
     {
-        public Models.Estabelecimento Estabelecimento { get; set; }
-        public IEnumerable<Models.Categoria> Categorias { get; set; }
+        public IEnumerable<Categoria> Categorias { get; set; }
+        public Estabelecimento Estabelecimento { get; set; }
     }
 }
