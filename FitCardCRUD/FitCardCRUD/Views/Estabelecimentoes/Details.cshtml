@@ -1,0 +1,74 @@
+﻿@model FitCardCRUD.ViewModel.EstabecimentoViewModel
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Estabelecimento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabNomeFantasia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabNomeFantasia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabCNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabCNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabTelefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabTelefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.CategoriaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.categoria.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estabelecimento.estabStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estabelecimento.estabStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Estabelecimento.Id }) |
+    @Html.ActionLink("Voltar para listagem", "Index")
+</p>
