@@ -13,9 +13,16 @@ namespace FitCardCRUD.Models
             var estabelecimento = (Estabelecimento)validationContext.ObjectInstance;
 
             if (estabelecimento.CategoriaId != Categoria.Supermercado)
+            {
                 return ValidationResult.Success;
-            else
+            }
+            else if(estabelecimento.estabTelefone == "") { 
                 return new ValidationResult("Telefone é obrigatório.");
+            }
+            else
+            {
+                return ValidationResult.Success;
+            }
         }
     }
 }
